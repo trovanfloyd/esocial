@@ -1,0 +1,1 @@
+CREATE SCHEMA db_esocial;

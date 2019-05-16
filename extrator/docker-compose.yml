@@ -1,0 +1,19 @@
+version: '3'
+services:
+  app:
+      build: .
+      ports:
+        - "8080:8080"
+      env_file:
+        - docker-compose.env        
+      environment:
+        - ENV=dev
+        - "TZ=America/Fortaleza" # offset = -03:00
+      depends_on:
+        - postgres-docker
+  postgres-docker:
+      image: postgres:10.4
+      environment:
+        - POSTGRES_DB=esocial
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=postgres

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.seplag.esocial.extrator</groupId>
+	<artifactId>extrator</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>extrator</name>
+	<description>Project extrator eSocial</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.3.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		
+		
+		<maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
+
+        <!--workaround for http://jira.codehaus.org/browse/MRESOURCES-99-->
+        <timestamp>${maven.build.timestamp}</timestamp>
+        <xmlschema.version>2.0.3</xmlschema.version>
+
+        <commons.lang.version>2.6</commons.lang.version>
+        <commons.collections.version>3.2.2</commons.collections.version>
+        <commons.codec>1.9</commons.codec>
+
+        <dom4j.version>1.6.1</dom4j.version>
+	</properties>
+
+	<dependencies>
+
+		<!-- SPRING -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-integration</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jersey</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+		  <groupId>org.springframework.boot</groupId>
+		  <artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<!-- SPRING -->
+
+		    		
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		</dependency>
+		    		
+		<dependency>
+		    <groupId>commons-codec</groupId>
+		    <artifactId>commons-codec</artifactId>
+		</dependency>
+
+        <dependency>
+            <groupId>org.apache.ws.xmlschema</groupId>
+            <artifactId>xmlschema-core</artifactId>
+            <version>${xmlschema.version}</version>
+        </dependency>
+		
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>${commons.lang.version}</version>
+        </dependency>
+		
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.thoughtworks.xstream</groupId>
+		    <artifactId>xstream</artifactId>
+		    <version>1.4.10</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+		    <groupId>io.springfox</groupId>
+		    <artifactId>springfox-swagger2</artifactId>
+		    <version>2.7.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>io.springfox</groupId>
+		    <artifactId>springfox-swagger-ui</artifactId>
+		    <version>2.7.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.2</version>
+			<scope>provided</scope>
+		</dependency>
+		
+	<!-- 	<dependency>
+			<groupId>br.gov.ce.seplag.jee</groupId>
+			<artifactId>seplag-jee-core</artifactId>
+			<version>2.4.3</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>javax.enterprise</groupId>
+		    <artifactId>cdi-api</artifactId>
+		    <version>2.0.SP1</version>
+		    <scope>provided</scope>
+		</dependency> -->
+		
+		<dependency>
+		  <groupId>io.jsonwebtoken</groupId>
+		  <artifactId>jjwt</artifactId>
+		  <version>0.9.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.bitbucket.b_c</groupId>
+			<artifactId>jose4j</artifactId>
+			<version>0.5.7</version>
+		</dependency>
+		
+		
+		
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>
